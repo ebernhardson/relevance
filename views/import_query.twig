@@ -1,0 +1,13 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    {% if saved %}
+        <h3>Saved {{ saved }} results for query.</h3>
+    {% endif %}
+    
+    <form action='#' method="post">
+        <h1>Import from search query</h1>
+        {{ form_widget(form) }}
+        <input type="submit" name="submit" />
+    </form>
+{% endblock %}
